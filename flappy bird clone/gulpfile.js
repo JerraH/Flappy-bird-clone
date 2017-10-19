@@ -25,7 +25,45 @@ gulp.task('sass', function(){
         .pipe(gulp.dest('css'));
 });
 
+//watch me go
 gulp.task('watch', function() {
     gulp.watch('js/*.js', ['jshint']);
     gulp.watch('scss/*.scss', ['sass']);
 });
+
+//this is yo default.  Runs all tasks then watches them.
+gulp.task('default', ['jshint', 'sass', 'watch']);
+
+//Minify your index: removes whitespace, Makes More Better
+gulp.task('html', function() {
+    return gulp.src('index.html')
+        .pipe(minifyHTML())
+        .pipe(gulp.dest('build/'));
+});
+
+//concatenate and minify your javascript!  Builds JS!
+gulp.task('scripts', function() {
+    return browserify('js/main.js')
+        .bundle()
+        .pipe(source('app.js'))
+        .pipe(buffer())
+        .pipe(uglify())
+        .pipe(gulp.dest('build/js;'));
+});
+
+//concatenates compiled css files
+gulp.task('styles', function() {
+    return gulp.src('css/*.css')
+    .pipe(concat('styles.css'))
+    .pipe(gulp.dest('build/css'));
+});
+
+//minify and optimize images
+gulp.task('images', function() {
+    return gulp.src('img/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('build/img'));
+});
+
+//build task
+gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', images]);
