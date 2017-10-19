@@ -12,7 +12,7 @@ var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 
 gulp.task('jshint', function(){
-    return gulp.src('site/js/*.js')
+    return gulp.src('/js/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
