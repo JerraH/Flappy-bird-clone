@@ -24,3 +24,8 @@ gulp.task('sass', function(){
         .pipe(sass())
         .pipe(gulp.dest('css'));
 });
+
+gulp.task('watch', function() {
+    gulp.watch('js/*.js', ['jshint']);
+    gulp.watch('scss/*.scss', ['sass']);
+});
