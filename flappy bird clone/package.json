@@ -21,7 +21,7 @@
     "gulp": "^3.9.1"
   },
   "devDependencies": {
-    "browserify": "^14.4.0",
+    "browserify": "^2.3.0",
     "gulp": "^3.9.1",
     "gulp-bower": "0.0.13",
     "gulp-browserify": "^0.5.1",
@@ -37,6 +37,7 @@
     "jshint": "^2.9.5",
     "node-bourbon": "^4.2.8",
     "node-neat": "^2.0.0-beta.0",
+    "sass-lint": "^1.12.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   }
