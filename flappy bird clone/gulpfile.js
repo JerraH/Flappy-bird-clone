@@ -11,8 +11,16 @@ var rename = require('gulp-rename');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 
+//Lint me some javascript
 gulp.task('jshint', function() {
     return gulp.src('js/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
+});
+
+//compile Sass task
+gulp.task('sass', function(){
+    return gulp.src('scss/*.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('css'));
 });
