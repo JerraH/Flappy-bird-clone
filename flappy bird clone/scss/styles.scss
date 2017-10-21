@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // @import 'bourbon';
 //     @import 'neat'; //dependent on above
 @import 'compass';
@@ -6,6 +7,15 @@
 @import 'normalize';
 // @import 'bourbon/bourbon';
 // @import 'neat/neat';
+=======
+// @import '../node_modules/bourbon';
+//     @import 'neat'; //dependent on above
+// @import 'compass';
+//     @import 'color-schemer';
+@import 'normalize';
+@import 'bourbon';
+@import 'neat';
+>>>>>>> 7f4e6b106358a22c1a3f29219229a9403b4f3e49
 @import 'base';
 
 //main
