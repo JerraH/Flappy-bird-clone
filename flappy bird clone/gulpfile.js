@@ -67,4 +67,4 @@ gulp.task('images', function() {
 
 
 //build task
-gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', images]);
+gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', 'images']);
