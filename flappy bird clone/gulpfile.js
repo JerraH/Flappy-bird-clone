@@ -10,6 +10,8 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
+var bourbon = require('bourbon').includePaths;
+var neat = require("bourbon-neat").includePaths;
 
 //Lint me some javascript
 gulp.task('jshint', function() {
@@ -21,7 +23,9 @@ gulp.task('jshint', function() {
 //compile Sass task
 gulp.task('sass', function(){
     return gulp.src('scss/*.scss')
-        .pipe(sass())
+        .pipe(sass({
+            includePaths: bourbon.concat(neat)
+        }))
         .pipe(gulp.dest('css'));
 });
 
