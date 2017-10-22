@@ -17,16 +17,38 @@
 }
 
 .navbar {
-    height: 1.5em;
+    height: 2em;
     width: 100%;
+    background-color: blue;
+    ul{
+        display: inline-block;
+        list-style-type: none;
+        height: 100%;
+        margin: 0;
+        font-size:1.5em;
+    }
+    li {
+        display: block;
+        float: left;
+        width: 5rem;
+        height: 100%;
+        color: white;
+        text-align: center;
+        &:hover {
+            background-color: black;
+            width: 7rem;
+        }
+    }
 }
 
 .section {
     width: 100%;
+    border: 1px black;
     @media screen and ($tablet) {
         width: 50%;
     }
     @media screen and ($desktop) {
         max-width: 25%;
+        margin: auto;
     }
 }

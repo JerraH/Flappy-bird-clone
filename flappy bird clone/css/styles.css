@@ -408,14 +408,33 @@ html {
       margin: 0 auto; } }
 
 .navbar {
-  height: 1.5em;
-  width: 100%; }
+  height: 2em;
+  width: 100%;
+  background-color: blue; }
+  .navbar ul {
+    display: inline-block;
+    list-style-type: none;
+    height: 100%;
+    margin: 0;
+    font-size: 1.5em; }
+  .navbar li {
+    display: block;
+    float: left;
+    width: 5rem;
+    height: 100%;
+    color: white;
+    text-align: center; }
+    .navbar li:hover {
+      background-color: black;
+      width: 7rem; }
 
 .section {
-  width: 100%; }
+  width: 100%;
+  border: 1px black; }
   @media screen and (min-width: 768px) {
     .section {
       width: 50%; } }
   @media screen and (min-width: 1068px) {
     .section {
-      max-width: 25%; } }
+      max-width: 25%;
+      margin: auto; } }
