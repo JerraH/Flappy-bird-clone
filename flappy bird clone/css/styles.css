@@ -420,13 +420,16 @@ html {
   .navbar li {
     display: block;
     float: left;
-    width: 5rem;
+    width: 33%;
     height: 100%;
     color: white;
     text-align: center; }
     .navbar li:hover {
       background-color: black;
       width: 7rem; }
+    @media screen and (min-width: 768px) {
+      .navbar li {
+        width: 5rem; } }
 
 .section {
   width: 100%;
@@ -438,3 +441,10 @@ html {
     .section {
       max-width: 25%;
       margin: auto; } }
+  .section .subhead {
+    width: 100%;
+    background-color: #141461;
+    color: white;
+    height: 3em; }
+    .section .subhead h2 {
+      color: white; }
