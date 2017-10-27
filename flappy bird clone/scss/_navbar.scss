@@ -1,34 +1,38 @@
 
 .navbar {
-    height: 2em;
+    height: 2.5em;
     width: 100%;
     background-color: $dark-blue;
     color: $white;
     margin: 0;
+    :link {
+        text-decoration: none;
+        color: $white;
+    }
     ul{
         display: inline-block;
         list-style-type: none;
         height: 100%;
         margin: 0;
         font-size:1.5em;
+        font-family: sans-serif;
     }
     li {
         display: block;
         float: left;
-        width: 33%;
         height: 100%;
+        width: contain;
         color: white;
         text-align: center;
         margin:0;
+        padding: .25em 1em;
         &:hover {
-            & {
-                width: 20%;
-            }
-            background-color: black;
-            width: 40%;
+            background-color: darken($dark-blue, 10%);
         }
-        @media screen and ($tablet) {
-            width: 5rem;
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
         }
     }
 }

@@ -8,81 +8,51 @@ body {
     background: $gray;
 }
 
-.container {
-    width:100%; // phone
-    margin: 0m;
-    @media screen and ($tablet) { //go larger
-        width: 70%;
-        max-width: 960px;
-        margin: 0;
-    }
-    @media screen and ($desktop) { //larger yet!!!
-        max-width: 1040px;
-        margin: 0;
-    }
-}
+
 
 header {
     background: $blue;
     color: white;
     margin: 0;
-}
-
-.navbar {
-    height: 2em;
-    width: 100%;
-    background-color: $dark-blue;
-    color: $white;
-    margin: 0;
-    ul{
-        display: inline-block;
-        list-style-type: none;
-        height: 100%;
+    font-family: sans-serif;
+    h1 {
         margin: 0;
-        font-size:1.5em;
     }
-    li {
-        display: block;
-        float: left;
-        width: 33%;
-        height: 100%;
-        color: white;
-        text-align: center;
-        margin:0;
-        &:hover {
-            & {
-                width: 20%;
-            }
-            background-color: black;
-            width: 40%;
-        }
-        @media screen and ($tablet) {
-            width: 5rem;
-        }
+    padding: 5px 1em .5em 1em;
+    @media screen and ($tablet) {
+        padding: 5px 1em .5em 40px;
     }
 }
 
-.section {
-    width: 100%;
-    border: 1px black;
+
+section {
+    @include grid-column(12, 0);
     font-size: 1em;
     color: white;
-    background-color: $blue;
-    @media screen and ($tablet) {
-        width: 50%;
-    }
+    padding: 0;
+    margin:0;
+    // @media screen and ($tablet) {
+    //     @include grid-column (6, 0);
+    // }
     
     @media screen and ($desktop) {
-        max-width: 25%;
         margin: auto;
     }
     .subhead {
-        width:100%;
+        @include column-grid(12, 0);
         background-color: $dark-blue;
-        color: white;
-        height: 3em;
-        h2 {
+        color: black;
+        background-color: $light-blue;
+        height: 2.5em;
+        h2, h3 {
             color: white;
+            margin:0;
         }
     }
+}
+
+.container {
+    @include column-grid(12, 0); // phone
+    margin: 0;
+    padding: 0;
 }
